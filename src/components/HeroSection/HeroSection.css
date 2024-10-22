@@ -1,0 +1,121 @@
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.catch-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    width: 100vw;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.catchline {
+    color: #dcdcc3;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 350px;
+    font-size: 1.3rem;
+    text-align: center;
+
+
+}
+
+.left-catchline {
+    text-align:start;
+    translate: 0px -150px;
+    margin-left: 50px;
+    
+
+    animation: slideUp  ease-in-out forwards 1s;
+}
+
+.right-catchline {
+    text-align:start;
+    margin-right: 50px;
+    translate: 0px -150px;
+
+    animation: slideUp  ease-in-out forwards 1.3s;
+    
+}
+
+.image-container {
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.hero-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    color: rgb(128, 131, 117);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 70%;
+    z-index: 1;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.marquee-container pre {
+    display: inline-block;
+    font-size: 12vw;
+    font-family: 'Times New Roman', Times, serif, cursive;
+    animation: marqueeAnimation 10s linear infinite;
+    animation-play-state: running;
+    transform: translateX(100%);
+}
+
+/*       Keyframes      */
+@keyframes marqueeAnimation {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+        filter: blur(100%);
+        
+    }
+    100% {
+        transform: translateY(-4em); 
+        filter: blur(0px);
+        color: black;
+    }
+}

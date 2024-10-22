@@ -1,0 +1,166 @@
+body {
+    cursor: url('src/assets/cur1054.cur'), auto;
+}
+
+/* Apply custom cursor to a specific element */
+button {
+    cursor: url('src/assets/cur1054.cur'), pointer;
+}
+
+.ProjectSection {
+    height: max-content;
+    color: black;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #dcdcc3;
+}
+
+.ProjectHead {
+    width: 100vw;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, sans-serif;
+    font-size: 2em;
+    margin: 2em 10vw;
+    justify-content: start;
+}
+
+.arrowdown {
+    height: 2em;
+    width: auto;
+    margin-inline: 1em;
+}
+
+.ProjectContainer {
+    height: 90vh;
+    display: block;
+}
+
+.ProjectList {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    overflow: visible;
+}
+
+.ProjectList .projects h2 {
+    list-style: none;
+    padding: 0;
+    margin-left: 100px;
+}
+
+.Projects {
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, sans-serif;
+    padding: 1em;
+    margin: 5px 0;
+    font-size: larger;
+    border-radius: 100px;
+    height: 5em;
+    display: block; /* Make each list item a block */
+    justify-content: space-between;
+    padding: 20px 0; /* Add some space between items */
+    border-bottom: 1px solid #ddd; /* Optional: adds a divider line between items */
+}
+
+.Projects h2 {
+    border: 2px solid #dcdcc3;
+    width: fit-content;
+    margin: .5em 3em;
+    padding: .5em 3em;
+}
+
+.Projects h2:hover {
+    transition: ease-out;
+    transition-duration: .5s;
+    background-color: black;
+    color: #dcdcc3;
+    border: 2px solid black;
+    border-radius: 50px;
+    
+    /* animation:extendright 1s ease-in-out forwards;
+    animation-iteration-count: 1; */
+
+}
+
+.projectText {
+    font-size: .8em !important;
+    width: 50vw;
+    margin: .5em 3em;
+    padding: .5em 3em;
+}
+
+/*
+@keyframes extendright {
+    100% {
+        width: 10em;  
+    }
+    
+    20% {
+        width: 4em;  
+    }
+    30% {
+        width: 4.5em;  
+    }
+    40% {
+        width: 5em;  
+    }
+    50% {
+        width: 5.5em; 
+    }
+    60% {
+        width: 6em;  
+    }
+    70% {
+        width: 6.5em;  
+    }
+    80% {
+        width: 7em;  
+    }
+    90% {
+        width: 7.5em;  
+    }
+    100% {
+        width: 8em;  
+    } 
+}*/
+
+.ProjectContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.VideoContainer {
+    width: 50%;
+    height: auto;
+    display: none;
+    /* Initially hidden */
+    padding: 1em;
+    position: fixed;
+    top: 10em;
+    /* Distance from the top of the screen */
+    right: 25em;
+    /* Distance from the right of the screen */
+    z-index: 10;
+    /* Ensures the container stays on top of other content */
+    width: 320px;
+    /* Set width of video container */
+    height: auto;
+    /* Auto height based on video content */
+}
+
+.VideoContainer video {
+    width: 40vw;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.VideoContainer.active {
+    display: block;
+}
