@@ -31,7 +31,6 @@
 #getin h2{
     padding-right: 200px;
     margin: 0px;
-
     animation: slideLeft1 1s;
     animation-delay: 0.2s;
 }

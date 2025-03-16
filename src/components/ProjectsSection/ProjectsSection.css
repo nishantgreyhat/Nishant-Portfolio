@@ -21,7 +21,7 @@ button {
     display: flex;
     font-family: 'Lucida Sans', 'Lucida Grande', Geneva, sans-serif;
     font-size: 2em;
-    margin: 2em 10vw;
+    margin: 1em 10vw;
     justify-content: start;
 }
 
@@ -32,35 +32,38 @@ button {
 }
 
 .ProjectContainer {
-    height: 90vh;
+    height: 100vh;
     display: block;
 }
 
-.ProjectList {
+.ProjectList li {
     display: flex;
     flex-direction: column;
     height: max-content;
     overflow: visible;
+    scrollbar-color: BLACK;
+    padding: 0px;
 }
 
-.ProjectList .projects h2 {
+.ProjectList .projects .projectNames {
     list-style: none;
-    padding: 0;
+    padding: 0px;
+    margin: 0px;
     margin-left: 100px;
 }
 
 .Projects {
     font-weight: 600;
     font-family: 'Lucida Sans', 'Lucida Grande', Geneva, sans-serif;
-    padding: 1em;
-    margin: 5px 0;
+    margin: 5vw 1vh,;
     font-size: larger;
-    border-radius: 100px;
-    height: 5em;
+    height: max-content;
     display: block; /* Make each list item a block */
     justify-content: space-between;
-    padding: 20px 0; /* Add some space between items */
-    border-bottom: 1px solid #ddd; /* Optional: adds a divider line between items */
+    padding: 6vw 1vw; /* Add some space between items */
+    border-right: 2px solid #000000; 
+     
+
 }
 
 .Projects h2 {
@@ -164,3 +167,67 @@ button {
 .VideoContainer.active {
     display: block;
 }
+.hoverInfo{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 5vw;
+    width: 20vw;
+    align-items: center;
+    align-self: center;
+    animation: slideUpDown infinite 4s;
+}
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(0em);
+        color: black;
+        filter: blur(0%);
+        
+    }
+    50% {
+        transform: translateY(3em); 
+        filter: blur(0px);
+        color: black;
+    }
+    100% {
+        transform: translateY(0em);
+        color: black;
+        filter: blur(0%);
+        
+    }
+}
+/* Slide-in animations */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(2em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-10em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* .ProjectNames { 
+    opacity: 0; 
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+.projectText {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out ;
+}
+
+.ProjectNames.in-view {
+    animation: slideLeft 1s ease-in-out forwards; 
+}
+
+.projectText.in-view {
+    animation: slideRight 1s ease-in-out both;
+} */

@@ -31,7 +31,7 @@ body {
     margin-left: 50px;
     
 
-    animation: slideUp  ease-in-out forwards 1s;
+    animation: slideUpDown infinite ease-in-out forwards 5s;
 }
 
 .right-catchline {
@@ -39,7 +39,7 @@ body {
     margin-right: 50px;
     translate: 0px -150px;
 
-    animation: slideUp  ease-in-out forwards 1.3s;
+    animation: slideUpDown infinite ease-in-out forwards 5s;
     
 }
 
@@ -110,7 +110,7 @@ body {
 @keyframes slideUp {
     0% {
         transform: translateY(0);
-        filter: blur(100%);
+        filter: blur(10%);
         
     }
     100% {
@@ -118,4 +118,25 @@ body {
         filter: blur(0px);
         color: black;
     }
+    
+}
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(-2em);
+        color: black;
+        filter: blur(0%);
+        
+    }
+    50% {
+        transform: translateY(-4em); 
+        filter: blur(0px);
+        color: black;
+    }
+    100% {
+        transform: translateY(-2em);
+        color: black;
+        filter: blur(0%);
+        
+    }
+    
 }

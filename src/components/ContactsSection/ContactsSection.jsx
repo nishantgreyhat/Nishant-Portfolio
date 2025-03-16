@@ -12,7 +12,9 @@ function ContactsSection() {
             (entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
+                        entry.target.classList.add('in-view'); // Add animation class
+                    } else {
+                        entry.target.classList.remove('in-view'); // Remove animation class to restart animation
                     }
                 });
             },
@@ -37,19 +39,28 @@ function ContactsSection() {
         <div className="ContactsContainer" ref={containerRef}>
             <div className="ContactHead">
                 <div id="getin">
-                    <h2>GET IN</h2>
+                    <h2 className="animated">GET IN</h2>
                 </div>
                 <div id="touch">
-                    <h2>TOUCH</h2>
+                    <h2 className="animated">TOUCH</h2>
                 </div>
             </div>
             <div className="vertical-line"></div>
             <div className="socials">
-                <h2 className="social-head">Socials</h2>
+                <h2 className="social-head animated">Socials</h2>
                 <ul className="handles-list">
-                    <li className="handles" id="instagram"><a href=""><img src={instagram} alt="" /></a><a href=""><p>Instagram</p></a></li>
-                    <li className="handles" id="github"><a href=""><img src={github} alt="" /></a><a href=""><p>GitHub</p></a></li>
-                    <li className="handles" id="Linkedin"><a href=""><img src={linkedin} alt="" /></a><a href=""><p>Linkedin</p></a></li>
+                    <li className="handles animated" id="instagram">
+                        <a href="https://www.instagram.com/nishhh.ant_/?hl=en"><img src={instagram} alt="instagram" /></a>
+                        <a href="https://www.instagram.com/nishhh.ant_/?hl=en"><p>Instagram</p></a>
+                    </li>
+                    <li className="handles animated" id="github">
+                        <a href="https://github.com/nishantgreyhat"><img src={github} alt="github" /></a>
+                        <a href="https://github.com/nishantgreyhat"><p>GitHub</p></a>
+                    </li>
+                    <li className="handles animated" id="Linkedin">
+                        <a href="https://www.linkedin.com/in/nishant-mishra-980010334/"><img src={linkedin} alt="Linkedin" /></a>
+                        <a href="https://www.linkedin.com/in/nishant-mishra-980010334/"><p>Linkedin</p></a>
+                    </li>
                 </ul>
             </div>
         </div>
