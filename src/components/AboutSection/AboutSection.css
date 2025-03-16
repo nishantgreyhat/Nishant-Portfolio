@@ -12,24 +12,64 @@
     height: 500px;
     justify-content: space-around;
 }
-.Abouthead{
+.AboutHead{
+    /* border: 2px solid yellow; */
     color: #F1EDED;
-    margin: 15vh 20vh;
+    width: 30%;
+    margin: 2em 0px;
     font-size: 4em;
     text-align: right;
 }
 .AboutParagraph{
+    /* border: 2px solid red; */
+    text-wrap:initial;
+    width: 70%;
     color: #F1EDED;
     font-size: larger;
     width: 50vw;
-    display: flex;
-    align-items: center;
+    align-self: center;
     margin: 0px;
     margin-inline: 0px;
     text-align: left;
 }
 
-.Abouthead { 
+@media (max-width: 1000px) { /* Tablet view */
+    .AboutContainer {
+        width: 90%;
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Auto height */
+        padding: 2vh 5vw;
+
+    }
+
+    .AboutHead, .AboutParagraph {
+        width: 100%; /* Full width */
+        text-align: center; /* Center align */
+    }
+
+    .AboutHead {
+        margin: 1em 0px;
+        font-size: 2.5rem; /* Slightly smaller heading */
+        text-align: left;
+    }
+
+    .AboutParagraph {
+        font-size: 1rem;
+        width: 70%;
+    }
+}
+@media (max-width: 768px) { /* Mobile view */
+    .AboutHead {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .AboutParagraph {
+        font-size: 0.9rem;
+        width: 70%;
+    }
+}
+
+.AboutHead { 
     opacity: 0; 
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
@@ -37,7 +77,7 @@
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
- .Abouthead.in-view {
+ .AboutHead.in-view {
     animation: slideLeft 1s ease-in-out forwards; 
 }
 
@@ -75,7 +115,7 @@
         left: 10px;
         width: 90vw;
     }
-    .Abouthead{
+    .AboutHead{
         font-size: 1.5em;
         width: 10vw;
     }

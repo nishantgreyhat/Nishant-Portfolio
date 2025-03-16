@@ -37,7 +37,7 @@ function AboutSection() {
     return (
         <>
             <div className="AboutContainer">
-                <h1 ref={aboutHeadRef} className="Abouthead">About</h1>
+                <h1 ref={aboutHeadRef} className="AboutHead">About</h1>
                 <p ref={aboutParagraphRef} className="AboutParagraph">
                     Meet Nishant Mishra, a spirited designer and developer, blending a passion for adventure and travel with a knack for web development. With an insatiable curiosity for learning anything new and intriguing, he's the coder who's not afraid to chase both bugs and bucks with equal interest.
                 </p>

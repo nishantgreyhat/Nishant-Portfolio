@@ -6,6 +6,7 @@ body {
 }
 
 .catch-container {
+    /* border: 2px solid red; */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -27,6 +28,7 @@ body {
 }
 
 .left-catchline {
+    /* border: 1px solid blue; */
     text-align:start;
     translate: 0px -150px;
     margin-left: 50px;
@@ -36,6 +38,7 @@ body {
 }
 
 .right-catchline {
+    border: 1px solid green;
     text-align:start;
     margin-right: 50px;
     translate: 0px -150px;
