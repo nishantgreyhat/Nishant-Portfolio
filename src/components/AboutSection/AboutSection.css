@@ -15,18 +15,20 @@
 .Abouthead{
     color: #F1EDED;
     margin: 15vh 20vh;
-    font-size: 5em;
+    font-size: 4em;
     text-align: right;
 }
 .AboutParagraph{
     color: #F1EDED;
     font-size: larger;
-    max-width: 50vw;
+    width: 50vw;
     display: flex;
     align-items: center;
-    margin: 5vh;
+    margin: 0px;
+    margin-inline: 0px;
     text-align: left;
 }
+
 .Abouthead { 
     opacity: 0; 
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
@@ -63,5 +65,18 @@
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+/* responsive design */
+@media (max-width: 767px) {
+    .AboutParagraph {
+        font-size: 12px;
+        bottom: 10px;  /* Adjusts position */
+        left: 10px;
+        width: 90vw;
+    }
+    .Abouthead{
+        font-size: 1.5em;
+        width: 10vw;
     }
 }

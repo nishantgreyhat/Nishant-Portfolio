@@ -1,3 +1,4 @@
 body{
   background-color: #dcdcc3;
+  cursor: url('/cursors/default.cur'),pointer;
 }
