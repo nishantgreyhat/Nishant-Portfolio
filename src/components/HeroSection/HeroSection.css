@@ -1,6 +1,8 @@
 
 html,
 body {
+    padding: 0px;
+    margin: 0px;
     cursor: pointer;
     overflow-x: hidden;
 }
@@ -13,15 +15,46 @@ body {
     margin-top: 1px;
     width: 100vw;
     justify-content: space-between;
+    
     position: relative;
     overflow: hidden;
 }
+
+@media (max-width: 768px) { /* Mobile view */
+    .catch-container{
+        height: 100vh;
+        width: 100vw;
+    }
+    .hero-image{
+        height: 70%;
+        width: auto;
+        
+    }
+}
+    
+
+@media (max-width: 425px) {
+    .left-catchline h2, .right-catchline{
+        padding-inline: 10px;
+    }
+    .scrollText {
+        font-size: 14px; /* Reduce font size */
+        left: 20px;  /* Adjust positioning */
+        bottom: 15px;
+        padding: 8px 12px; /* Reduce padding */
+    }
+
+    .scrollText .arrowdown {
+        height: 1.5em; /* Reduce arrow size */
+    }
+}
+
 
 .catchline {
     color: #dcdcc3;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 350px;
-    font-size: 1.3rem;
+    font-size: clamp(14px,2vw,22px);
     text-align: center;
 
 
@@ -31,19 +64,20 @@ body {
     /* border: 1px solid blue; */
     text-align:start;
     translate: 0px -150px;
-    margin-left: 50px;
-    
-
-    animation: slideUpDown infinite ease-in-out forwards 5s;
+    padding-inline: clamp(1px,15vw,100px);
+    animation: slideUpDownMobile infinite ease-in-out forwards 5s;
 }
 
 .right-catchline {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     text-align:start;
     margin-right: 50px;
     translate: 0px -150px;
+    margin: 0px;
+    padding-inline: clamp(1px,15vw,100px);
+    padding-left: 0px;
 
-    animation: slideUpDown infinite ease-in-out forwards 5s;
+    animation: slideUpDownMobile infinite ease-in-out forwards 5s;
     
 }
 
@@ -53,11 +87,16 @@ body {
     align-items: flex-end;
     justify-content: center;
     overflow: hidden;
-    height: 100%;
-    position: relative;
+    height: clamp(100px,100%,500px);
+    align-items: center;
+    
+    
 }
 
 .hero-image {
+    position: absolute;    
+    bottom:0px;
+    left: 50;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -84,7 +123,7 @@ body {
 
 .marquee-container pre {
     display: inline-block;
-    font-size: 12vw;
+    font-size: clamp(100px,12vw,250px);
     font-family: 'Times New Roman', Times, serif, cursive;
     animation: marqueeAnimation 10s linear infinite;
     animation-play-state: running;
@@ -164,12 +203,32 @@ body {
         
     }
     50% {
-        transform: translateY(-2em); 
+        transform: translateY(0em); 
         filter: blur(0px);
         color: black;
     }
     100% {
         transform: translateY(0em);
+        color: black;
+        filter: blur(0%);
+        
+    }
+    
+}
+@keyframes slideUpDownMobile {
+    0% {
+        transform: translateY(-2em);
+        color: black;
+        filter: blur(0%);
+        
+    }
+    50% {
+        transform: translateY(-4em); 
+        filter: blur(0px);
+        color: black;
+    }
+    100% {
+        transform: translateY(-2em);
         color: black;
         filter: blur(0%);
         
