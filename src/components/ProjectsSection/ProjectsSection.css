@@ -87,11 +87,22 @@ button {
 }
 
 .projectText {
-    font-size: .8em !important;
+    font-size: 12px !important;
     width: 50vw;
     margin: .5em 3em;
     padding: .5em 3em;
 }
+
+@media (max-width: 768px) { /* Mobile view */
+    .ProjectHead{
+        font-size: 25px;
+    }
+
+    .ProjectNames{
+        font-size: 18px;
+    }
+}
+
 
 /*
 @keyframes extendright {

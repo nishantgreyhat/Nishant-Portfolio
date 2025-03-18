@@ -4,6 +4,7 @@
 }
 
 .AboutContainer {
+    /* border: 2px solid yellow; */
     overflow: hidden;
     background-color: #000000;
     width: 100vw;
@@ -35,15 +36,16 @@
 
 @media (max-width: 1024px) { /* Tablet view */
     .AboutContainer {
-        width: 90%;
+        width: 100%;
         flex-direction: column; /* Stack items vertically */
         height: auto; /* Auto height */
         padding: 2vh 5vw;
+        padding-bottom: 12vw;
 
     }
 
     .AboutHead, .AboutParagraph {
-        width: 100%; /* Full width */
+        width: 100%; 
         text-align: center; /* Center align */
     }
 
@@ -58,14 +60,16 @@
         width: 70%;
     }
 }
+
 @media (max-width: 768px) { /* Mobile view */
     .AboutHead {
+        text-align: center;
         font-size: 2.5rem; /* Smaller heading for mobile */
     }
 
     .AboutParagraph {
-        font-size: 1rem;
-        width: 70%;
+        font-size: 12px;
+        width: 90%;
     }
 }
 
@@ -108,15 +112,4 @@
     }
 }
 /* responsive design */
-@media (max-width: 767px) {
-    .AboutParagraph {
-        font-size: 12px;
-        bottom: 10px;  /* Adjusts position */
-        left: 10px;
-        width: 90vw;
-    }
-    .AboutHead{
-        font-size: 1.5em;
-        width: 10vw;
-    }
-}
+

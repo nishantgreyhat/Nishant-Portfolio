@@ -1,26 +1,32 @@
 
-html,
-body {
-    padding: 0px;
-    margin: 0px;
+html, body {
+    width: 100vw;
+    /* border: 1px solid blue; */
+    padding: 0;
+    margin: 0;
     cursor: pointer;
     overflow-x: hidden;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+
 .catch-container {
     /* border: 2px solid red; */
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
-    margin-top: 1px;
-    width: 100vw;
     justify-content: space-between;
-    
+    margin-top: 1px;
     position: relative;
     overflow: hidden;
 }
 
-@media (max-width: 768px) { /* Mobile view */
+
+@media (max-width: 868px) { /* Mobile view */
     .catch-container{
         height: 100vh;
         width: 100vw;
@@ -33,17 +39,25 @@ body {
 }
     
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     .left-catchline h2, .right-catchline{
         padding-inline: 10px;
     }
-    .scrollText {
-        font-size: 14px; /* Reduce font size */
-        left: 20px;  /* Adjust positioning */
-        bottom: 15px;
-        padding: 8px 12px; /* Reduce padding */
-    }
+    .hero-image{
+        height: 70%;
+        width: auto;
+        transform: translateX(-35px);
 
+    }
+    .scrollText {
+        bottom: 10px; /* Adjust bottom spacing */
+        left: 20px;  /* Adjust left spacing */
+        font-size: 10px !important;
+        padding: 4px 4px 4px 10px !important;
+    }
+    .marquee-container{
+        z-index: 4 !important;
+    }
     .scrollText .arrowdown {
         height: 1.5em; /* Reduce arrow size */
     }
@@ -82,9 +96,10 @@ body {
 }
 
 .image-container {
+    width: fit-content;
     z-index: 1;
     display: flex;
-    align-items: flex-end;
+    align-items:center;
     justify-content: center;
     overflow: hidden;
     height: clamp(100px,100%,500px);
@@ -96,7 +111,6 @@ body {
 .hero-image {
     position: absolute;    
     bottom:0px;
-    left: 50;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -134,16 +148,17 @@ body {
     position: absolute;    
     bottom: 20px;
     left: 40px;
-    z-index: 1;    /* Ensures it stays above other elements */
+    z-index: 1;
     font-size: 16px;
     font-weight: bold;
     color: white;
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px 15px;
+    padding:5px 10px 5px 15px;
     border-radius: 5px;
-    pointer-events: none; /* Prevents it from interfering with clicks */
+    pointer-events: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .scrollText .arrowdown {
