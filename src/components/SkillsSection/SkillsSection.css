@@ -1,3 +1,6 @@
+body{
+    color: black;
+}
 .techHead{
     display: flex;
     align-items: center;
