@@ -1,4 +1,96 @@
-.skillsContainer{
-    height: 100vh;
-    width: 100vw;
+.techHead{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    margin-inline: 50px;
+    margin-top: 50px;
 }
+.techHead img {
+    display: span;
+    height: 60px;
+    width: auto;
+    margin-inline: .5em;
+
+
+}
+.container {
+    margin: 100px;
+    margin-top: 50px ;
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-rows: 180px 220px;
+    grid-template-columns: repeat(3,minmax(100px,400px));
+    align-items: start;
+    justify-content: center;
+    font-family:'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    grid-gap: 10px 20px;
+}
+.items ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.item1, .item2, .item3 {
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.item4,.item5, .item6 ,.item7,.item8, .item9{
+    font-size: 30px;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.item3 {
+    /* border: 2px solid red; */
+    /* background-color: rgb(255, 141, 160); */
+}
+
+.item4{
+    /* border: 2px solid rgb(11, 255, 19); */
+    /* background-color: rgb(130, 249, 130); */
+}
+.item5 {
+    /* border: 2px solid rgb(255, 255, 11); */
+    /* background-color: rgb(246, 246, 151); */
+}
+
+.item6 {
+    /* border: 2px solid blue; */
+    /* background-color: rgb(144, 144, 254); */
+}
+
+.item7 {
+    /* border: 2px solid red; */
+    /* background-color: rgb(255, 141, 160); */
+}
+
+.item8{
+    /* border: 2px solid rgb(11, 255, 19); */
+    /* background-color: rgb(130, 249, 130); */
+}
+.item9{
+    /* border: 2px solid rgb(11, 255, 19); */
+    /* background-color: rgb(130, 249, 130); */
+}
+
+@media (max-width: 768px) { /* Mobile view */
+
+    .container{
+        margin: 10px;
+        grid-template-rows: 70px 80px ;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .item1, .item2, .item3 {
+        font-size: 15px;
+    }
+    
+    .item4,.item5, .item6 ,.item7,.item8, .item9{
+        font-size: 12px;
+        
+    }
+}
+
