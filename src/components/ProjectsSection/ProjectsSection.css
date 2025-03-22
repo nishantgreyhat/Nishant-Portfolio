@@ -16,23 +16,24 @@ button {
     background-color: #dcdcc3;
 }
 
-.ProjectHead {
-    width: 100vw;
+.ProjectHead{
     display: flex;
-    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, sans-serif;
-    font-size: 2em;
-    margin: 1em 10vw;
-    justify-content: start;
+    align-items: center;
+    font-size: 3em;
+    font-weight: 600;
+    margin-inline: 50px;
+    margin-top: 0px;
 }
-
-.arrowdown {
-    height: 2em;
+.ProjectHead img {
+    height: 1.5em;
     width: auto;
-    margin-inline: 1em;
+    margin-inline: .5em;
+
+
 }
 
 .ProjectContainer {
-    height: 100vh;
+    /* height: 90vh; */
     display: block;
 }
 
@@ -87,8 +88,8 @@ button {
 }
 
 .projectText {
-    font-size: 12px !important;
-    width: 50vw;
+    font-size: 16px ;
+    width: 70vw;
     margin: .5em 3em;
     padding: .5em 3em;
 }
@@ -96,10 +97,27 @@ button {
 @media (max-width: 768px) { /* Mobile view */
     .ProjectHead{
         font-size: 25px;
+        margin-bottom: 5vw;
     }
 
-    .ProjectNames{
-        font-size: 18px;
+    .Projects .ProjectNames{
+        font-size: 20px;
+        padding-inline: 5vw;
+        margin: 0px;
+        margin-bottom: 1vw;
+    }
+    .Projects{
+        padding: 0px;
+        margin-inline: 10vw;
+        border: none;
+        width: 100vw;
+        
+    }
+    .projectText{
+        font-size: 14px;
+        width: 80vw;
+        padding: 0px;
+        margin-inline: 0px;
     }
 }
 
@@ -148,20 +166,18 @@ button {
 }
 
 .VideoContainer {
-    width: 50%;
+    width: 5vw;
     height: auto;
-    display: none;
+    /* display:none ; */
     /* Initially hidden */
     padding: 1em;
-    position: fixed;
-    top: 10em;
+    position:fixed;
+    top: 10vw;
     /* Distance from the top of the screen */
-    right: 25em;
+    right: 40%;
     /* Distance from the right of the screen */
     z-index: 10;
     /* Ensures the container stays on top of other content */
-    width: 320px;
-    /* Set width of video container */
     height: auto;
     /* Auto height based on video content */
 }
@@ -186,6 +202,38 @@ button {
     align-self: center;
     animation: slideUpDown infinite 4s;
 }
+
+@media (max-width: 768px) {
+    .VideoContainer {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw; /* Make it take most of the screen width */
+        max-width: 400px; /* Set a max width */
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1em;
+        border-radius: 10px;
+        display: none; /* Initially hidden */
+    }
+
+    .VideoContainer.active {
+        display: block;
+    }
+
+    .VideoContainer video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 5px solid #f4f4f4;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .hoverInfo{
+        display: none;
+    }
+}
+
+
 @keyframes slideUpDown {
     0% {
         transform: translateY(0em);
