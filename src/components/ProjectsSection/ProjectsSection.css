@@ -168,7 +168,7 @@ button {
 .VideoContainer {
     width: 5vw;
     height: auto;
-    /* display:none ; */
+    display:none ;
     /* Initially hidden */
     padding: 1em;
     position:fixed;

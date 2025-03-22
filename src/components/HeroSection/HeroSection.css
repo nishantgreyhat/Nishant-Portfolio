@@ -111,7 +111,7 @@ html, body {
 .hero-image {
     position: absolute;    
     bottom:0px;
-    max-width: 100%;
+    max-width: 110%;
     max-height: 100%;
     object-fit: contain;
     z-index: 2;
