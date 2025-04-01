@@ -1,0 +1,22 @@
+/* Center the loading animation */
+.loading-container {
+  background-color: #dcdcc3 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    /* Change this to match your website's background */
+    color: rgb(126, 104, 89);
+  }
+  
+  /* Ensure Lottie animation is properly sized */
+  .loading-container lottie-player {
+    width: clamp(50px,10vw,200px);
+    height:clamp(50px,10vw,200px);
+  }
+  .loadingText{
+    font-size: clamp(20px,10vw,10px);
+  }
+  

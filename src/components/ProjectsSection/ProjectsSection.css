@@ -200,7 +200,7 @@ button {
     width: 20vw;
     align-items: center;
     align-self: center;
-    animation: slideUpDown infinite 4s;
+    animation: slideUpDown infinite 3s;
 }
 
 @media (max-width: 768px) {
