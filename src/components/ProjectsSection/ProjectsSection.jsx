@@ -84,11 +84,11 @@ const ProjectsSection = () => {
                 <ul className="ProjectList">
                     <li className="Projects" data-video={jobportalVid}>
                         <h2 className="ProjectNames" id="Project1">JobPortal</h2>
-                        <span className="projectText">The <a href="">Job Portal</a> is an intuitive platform that connects job seekers with potential employers, streamlining the hiring process. It features job listings, resume uploads, employer profiles, and a user-friendly search system. Designed to enhance accessibility and efficiency, the portal provides a seamless experience for both recruiters and applicants, making job searching and hiring easier and more effective.</span>
+                        <span className="projectText">The <a href="https://job-portal-product.vercel.app/">Job Portal</a> is an intuitive platform that connects job seekers with potential employers, streamlining the hiring process. It features job listings, resume uploads, employer profiles, and a user-friendly search system. Designed to enhance accessibility and efficiency, the portal provides a seamless experience for both recruiters and applicants, making job searching and hiring easier and more effective.</span>
                     </li>
                     <li className="Projects" data-video={lnkSnipVid}>
                         <h2 className="ProjectNames" id="Project2">lnkSnip</h2>
-                        <span className="projectText"><a href="">Lnksnip</a> is a user-friendly and efficient URL shortening service designed to simplify and manage long URLs. With a sleek interface and a secure backend, it offers features like customizable short links, analytics tracking, and QR code generation. Built with performance and scalability in mind, Lnksnip ensures fast redirection and reliable link management for individuals and businesses.</span>
+                        <span className="projectText"><a href="https://lnksnip.onrender.com/">Lnksnip</a> is a user-friendly and efficient URL shortening service designed to simplify and manage long URLs. With a sleek interface and a secure backend, it offers features like customizable short links, analytics tracking, and QR code generation. Built with performance and scalability in mind, Lnksnip ensures fast redirection and reliable link management for individuals and businesses.</span>
                     </li>
                     <li className="Projects" data-video={jobportalVid}>
                         <h2 className="ProjectNames" id="Project3">Vyadyavatica</h2>
