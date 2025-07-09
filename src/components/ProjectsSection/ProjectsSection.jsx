@@ -92,7 +92,7 @@ const ProjectsSection = () => {
                     </li>
                     <li className="Projects" data-video={jobportalVid}>
                         <h2 className="ProjectNames" id="Project3">Vyadyavatica</h2>
-                        <span className="projectText">The Virtual Herbal Garden is an interactive and educational platform showcasing a diverse range of medicinal plants used in AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy). Designed as an immersive experience, the project allows users to explore a digital garden where they can learn about the medicinal properties, uses, and significance of various herbs. With an engaging interface and informative content, the Virtual Herbal Garden aims to promote awareness of traditional herbal medicine in an interactive and accessible manner.</span>
+                        <span className="projectText">The Virtual herbal Garden is an interactive and educational platform showcasing a diverse range of medicinal plants used in AYUSH (Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy). Designed as an immersive experience, the project allows users to explore a digital garden where they can learn about the medicinal properties, uses, and significance of various herbs. With an engaging interface and informative content, the Virtual Herbal Garden aims to promote awareness of traditional herbal medicine in an interactive and accessible manner.</span>
                     </li>
                 </ul>
                 <div className="hoverInfo">
